@@ -12,7 +12,7 @@ import { divideSectionIntoSubsections } from "./lib/subsections";
 
 export const extractProject = (sections: ResumeSectionToLines) => {
   const projects: ResumeProject[] = [];
-  const projectScores = [];
+  const projectScores: any[] = [];
   const lines = getSectionLinesByKeywords(sections, ["project"]);
   const subsections = divideSectionIntoSubsections(lines);
 

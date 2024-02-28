@@ -44,7 +44,7 @@ const JOB_TITLE_FEATURE_LIST: FeatureSet[] = [
 
 export const extractWorkExperience = (sections: ResumeSectionToLines) => {
   const workExperiences: ResumeWorkExperience[] = [];
-  const workExperiencesScores = [];
+  const workExperiencesScores: any[] = [];
   const lines = getSectionLinesByKeywords(
     sections,
     WORK_EXPERIENCE_KEYWORDS_LOWERCASE
