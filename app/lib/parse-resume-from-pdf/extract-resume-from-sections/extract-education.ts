@@ -53,7 +53,7 @@ const GPA_FEATURE_SETS: FeatureSet[] = [
 
 export const extractEducation = (sections: ResumeSectionToLines) => {
   const educations: ResumeEducation[] = [];
-  const educationScores = [];
+  const educationScores: any[] = [];
   const lines = getSectionLinesByKeywords(sections, ["education"]);
   const subsections = divideSectionIntoSubsections(lines);
   for (const subsectionsLines of subsections) {
