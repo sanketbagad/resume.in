@@ -1,8 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
 import { Hero } from "./home/Hero";
 import { Steps } from "./home/Steps";
-import { TopNavBar } from "./components/TopNavBar";
 
 export default function Home() {
   // const [videoEnded, setVideoEnded] = useState(false);
