@@ -1,5 +1,16 @@
+// export const cx = (...classes: Array<string | boolean | undefined>) => {
+//   const newClasses = [];
+//   for (const c of classes) {
+//     if (typeof c === "string") {
+//       newClasses.push(c.trim());
+//     }
+//   }
+
+//   return newClasses.join(" ");
+// };
+
 export const cx = (...classes: Array<string | boolean | undefined>) => {
-  const newClasses = [];
+  const newClasses: string[] = [];
   for (const c of classes) {
     if (typeof c === "string") {
       newClasses.push(c.trim());
@@ -8,3 +19,4 @@ export const cx = (...classes: Array<string | boolean | undefined>) => {
 
   return newClasses.join(" ");
 };
+
