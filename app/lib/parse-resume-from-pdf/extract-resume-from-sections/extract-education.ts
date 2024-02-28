@@ -50,6 +50,7 @@ const GPA_FEATURE_SETS: FeatureSet[] = [
   [hasLetter, -4],
 ];
 
+
 export const extractEducation = (sections: ResumeSectionToLines) => {
   const educations: ResumeEducation[] = [];
   const educationScores = [];
