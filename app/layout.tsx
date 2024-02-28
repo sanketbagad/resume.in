@@ -27,7 +27,7 @@ export default function RootLayout({
     >
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/Resume.png" />
+        <link rel="icon" href="/assets/Resume.PNG" />
       </head>
       <body className={inter.className}>
         <TopNavBar />
