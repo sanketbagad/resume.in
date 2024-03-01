@@ -24,7 +24,7 @@ export default function Create() {
         </Provider>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn redirectUrl="/sign-in" />
+        <RedirectToSignIn />
       </SignedOut>
     </>
   );

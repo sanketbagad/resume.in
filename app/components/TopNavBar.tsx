@@ -56,8 +56,6 @@ export const TopNavBar = () => {
             </Link>
           ))}
           <UserButton
-          signInUrl="/sign-in"
-          afterSignOutUrl="/sign-in"
           />
           </>
           ) : (

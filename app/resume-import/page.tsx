@@ -66,7 +66,7 @@ export default function ImportResume() {
         </main>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn redirectUrl="/sign-in" />
+        <RedirectToSignIn />
       </SignedOut>
     </>
   );

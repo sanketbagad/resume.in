@@ -1,12 +1,9 @@
 import { SignIn } from "@clerk/nextjs";
-import { TopNavBar } from "../components/TopNavBar";
- 
-export default function Page() {
+
+export default function SignInPage() {
   return (
-    <>
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex justify-center items-center h-screen">
       <SignIn />
     </div>
-    </>
   );
 }

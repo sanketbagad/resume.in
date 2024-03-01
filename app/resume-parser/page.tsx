@@ -128,7 +128,7 @@ export default function ResumeParser() {
         </main>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn redirectUrl="/sign-in" />
+        <RedirectToSignIn />
       </SignedOut>
     </>
   );
