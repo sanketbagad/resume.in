@@ -13,7 +13,7 @@ import { cx } from "../lib/cx";
 import ResumeDropzone from "../components/ResumeDropzone";
 import { ResumeTable } from "./ResumeTable";
 import { readPdf } from "../lib/parse-resume-from-pdf/read-pdf";
-import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { RedirectToSignIn, RedirectToSignUp, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const RESUME_EXAMPLES = [
   {
@@ -128,7 +128,7 @@ export default function ResumeParser() {
         </main>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn />
+        <RedirectToSignUp />
       </SignedOut>
     </>
   );

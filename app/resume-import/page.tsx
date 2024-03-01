@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getHasUsedAppBefore } from "../lib/redux/local-storage";
 import Link from "next/link";
 import ResumeDropzone from "../components/ResumeDropzone";
-import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { RedirectToSignIn, RedirectToSignUp, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function ImportResume() {
   const [hasUsedAppBefore, setHasUsedAppBefore] = useState(false);
@@ -66,7 +66,7 @@ export default function ImportResume() {
         </main>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn />
+        <RedirectToSignUp />
       </SignedOut>
     </>
   );

@@ -18,7 +18,7 @@ export const Hero = () => {
           With this powerful resume builder
         </p>
         <Link
-          href={userId ? "/resume-import" : "/sign-in"}
+          href={userId ? "/resume-import" : "/sign-up"}
           className="btn-primary mt-6 lg:mt-14"
         >
           Create Resume
@@ -29,7 +29,7 @@ export const Hero = () => {
         <p className="mt-3 text-sm text-gray-600 lg:mt-36">
           Already have a resume? Test its ATS readability with the{" "}
           <Link
-            href={userId ? "/resume-parser" : "/sign-in"}
+            href={userId ? "/resume-parser" : "/sign-up"}
             className="underline underline-offset-2"
           >
             resume parser

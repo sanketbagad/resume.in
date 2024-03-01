@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { store } from "../lib/redux/store";
 import { ResumeForm } from "../components/ResumeForm";
 import { Resume } from "../components/Resume";
-import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { RedirectToSignIn, RedirectToSignUp, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function Create() {
   return (
@@ -24,7 +24,7 @@ export default function Create() {
         </Provider>
       </SignedIn>
       <SignedOut>
-        <RedirectToSignIn />
+        <RedirectToSignUp />
       </SignedOut>
     </>
   );
