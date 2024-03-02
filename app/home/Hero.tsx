@@ -1,11 +1,24 @@
 import Link from "next/link";
 import { FlexboxSpacer } from "../components/FlexboxSpacer";
 import { AutoTypingResume } from "./AutoTypingResume";
-import { useAuth } from "@clerk/nextjs";
+import { SignInButton, useAuth } from "@clerk/nextjs";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export const Hero = () => {
   const { userId } = useAuth();
+
+  const SignInModal = () => {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="bg-white p-8 rounded-lg">
+          <SignInButton mode="modal" />
+        </div>
+      </div>
+    );
+  }
+
+  const router = useRouter();
 
 
   return (
@@ -23,7 +36,8 @@ export const Hero = () => {
         <button
           // href={userId ? "/resume-import" : "/sign-up"}
           onClick={
-            () => userId ? window.location.href = "/resume-import" : toast.error("Please sign up to use this feature")
+            () => userId ? router.push("/resume-import")
+             : toast.error("Please sign up to use this feature")
           }
           className="btn-primary mt-6 lg:mt-14"
         >
@@ -36,7 +50,8 @@ export const Hero = () => {
           Already have a resume? Test its ATS readability with the{" "}
           <button
             onClick={
-              () => userId ? window.location.href = "/resume-parser" : toast.error("Please sign up to use this feature")
+              () => userId ? router.push("/resume-parser")
+              : toast.error("Please sign up to use this feature")
             }
             // href={userId ? "/resume-parser" : "/sign-up"}
             className="underline underline-offset-2"

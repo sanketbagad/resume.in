@@ -1,33 +1,35 @@
 "use client";
+import { useEffect } from "react";
 import { Hero } from "./home/Hero";
 import { Steps } from "./home/Steps";
-
+import { SignInButton, useAuth } from "@clerk/nextjs";
 export default function Home() {
-  // const [videoEnded, setVideoEnded] = useState(false);
+  const { isSignedIn } = useAuth();
 
-  // // Function to handle video ended event
-  // const handleVideoEnd = () => {
-  //   setVideoEnded(true);
-  // };
+  // const SignInModal = () => {
+  //   return (
+  //     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+  //       <div className="bg-white p-8 rounded-lg">
+  //         <SignInButton mode="modal" />
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
+
 
   // useEffect(() => {
-  //   const video = document.getElementById("video") as HTMLVideoElement;
-  //   video.addEventListener("ended", handleVideoEnd);
-  //   return () => {
-  //     video.removeEventListener("ended", handleVideoEnd);
-  //   };
-  // }, []);
+  //   if (!isSignedIn) {
+  //     const timer = setTimeout(() => {
+  //       SignInModal();
+  //     }
+  //     , 1000);
+  //   }
+  // }, [isSignedIn]);
+ 
 
   return (
     <>
-      {/* <video
-        id="video"
-        autoPlay
-        muted
-        className={`h-screen w-full object-cover ${videoEnded ? "hidden" : ""}`}
-      >
-        <source src="/assets/Resume.mp4" type="video/mp4" />
-      </video> */}
       <main
         className={`mx-auto max-w-screen-2xl bg-dot px-8 pb-32 text-gray-900 lg:px-12 block`}
       >

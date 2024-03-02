@@ -4,6 +4,7 @@ import "./globals.css";
 import { TopNavBar } from "./components/TopNavBar";
 import { ClerkProvider } from '@clerk/nextjs';
 import { Toaster } from "react-hot-toast";
+import { useSignIn } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
