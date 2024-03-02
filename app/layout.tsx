@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { TopNavBar } from "./components/TopNavBar";
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs';
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,15 @@ export default function RootLayout({
       <body className={inter.className}>
         <TopNavBar />
         {children}
+        <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            background: "#333",
+            color: "#fff",
+          },
+        }}
+        />
       </body>
     </html>
     </ClerkProvider>

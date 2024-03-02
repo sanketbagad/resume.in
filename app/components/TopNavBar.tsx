@@ -59,12 +59,20 @@ export const TopNavBar = () => {
           />
           </>
           ) : (
+            <>
             <Link
               className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4"
               href="/sign-up"
             >
+              Sign Up
+            </Link>
+            <Link
+              className="rounded-md px-1.5 py-2 text-gray-500 hover:bg-gray-100 focus-visible:bg-gray-100 lg:px-4"
+              href="/sign-in"
+            >
               Sign In
             </Link>
+            </>
           )}
         </nav>
       </div>

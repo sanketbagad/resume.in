@@ -2,9 +2,12 @@ import Link from "next/link";
 import { FlexboxSpacer } from "../components/FlexboxSpacer";
 import { AutoTypingResume } from "./AutoTypingResume";
 import { useAuth } from "@clerk/nextjs";
+import toast from "react-hot-toast";
 
 export const Hero = () => {
   const { userId } = useAuth();
+
+
   return (
     <section className="lg:flex lg:h-[825px] lg:justify-center">
       <FlexboxSpacer maxWidth={75} minWidth={0} className="hidden lg:block" />
@@ -17,23 +20,29 @@ export const Hero = () => {
         <p className="mt-3 text-lg lg:mt-5 lg:text-xl">
           With this powerful resume builder
         </p>
-        <Link
-          href={userId ? "/resume-import" : "/sign-up"}
+        <button
+          // href={userId ? "/resume-import" : "/sign-up"}
+          onClick={
+            () => userId ? window.location.href = "/resume-import" : toast.error("Please sign up to use this feature")
+          }
           className="btn-primary mt-6 lg:mt-14"
         >
           Create Resume
-        </Link>
+        </button>
         <p className=" mt-3 text-sm text-gray-600">
           No Payment Required | Easy to Use | ATS Friendly
         </p>
         <p className="mt-3 text-sm text-gray-600 lg:mt-36">
           Already have a resume? Test its ATS readability with the{" "}
-          <Link
-            href={userId ? "/resume-parser" : "/sign-up"}
+          <button
+            onClick={
+              () => userId ? window.location.href = "/resume-parser" : toast.error("Please sign up to use this feature")
+            }
+            // href={userId ? "/resume-parser" : "/sign-up"}
             className="underline underline-offset-2"
           >
             resume parser
-          </Link>
+          </button>
         </p>
       </div>
       <FlexboxSpacer maxWidth={100} minWidth={50} className="hidden lg:block" />{" "}
